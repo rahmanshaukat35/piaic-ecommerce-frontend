@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav>
       {/* large Screen */}
-      <div className="flex justify-between items-center w-full h-20 lg:px-20 px-5 max-w-[1640px] mx-auto">
+      <div className="flex justify-between items-center w-full h-20 ">
         {/* Logo Image */}
         <div>
           <Link href={"/"}>

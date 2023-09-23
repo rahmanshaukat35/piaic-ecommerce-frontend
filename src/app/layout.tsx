@@ -18,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={sora.className}>
-        <Navbar />
-        {children}
+        <main className="lg:px-20 px-5 max-w-[1540px] mx-auto">
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
