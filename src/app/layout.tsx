@@ -2,6 +2,7 @@ import Navbar from "@/components/sections/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
+import Footer from "@/components/sections/Footer";
 
 const sora = Sora({ subsets: ["latin"], style: "normal" });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
