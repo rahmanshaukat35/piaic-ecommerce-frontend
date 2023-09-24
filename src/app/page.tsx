@@ -1,7 +1,8 @@
 import Hero from "@/components/sections/Hero";
+import Newsletter from "@/components/sections/Newsletter";
 import Products from "@/components/sections/Products";
 import Promotions from "@/components/sections/Promotions";
-import Image from "next/image";
+import Unique from "@/components/sections/Unique";
 
 export default function Home() {
   return (
@@ -9,6 +10,8 @@ export default function Home() {
       <Hero />
       <Promotions />
       <Products />
+      <Unique />
+      <Newsletter />
     </main>
   );
 }

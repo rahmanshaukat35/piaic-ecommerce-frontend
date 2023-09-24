@@ -27,7 +27,7 @@ const SwipperSlider = () => {
       {products.map((prod, i) => (
         <SwiperSlide key={i}>
           <div className="flex flex-col  justify-center px-5 py-10 items-center">
-            <div className="flex flex-col  justify-center items-start h-[400px] w-full hover:scale-110 ease-in duration-300 gap-3">
+            <div className="flex flex-col  justify-center items-start h-[500px] w-full hover:scale-110 ease-in duration-300 gap-3">
               <Link href={""}>
                 <Image
                   src={prod.image}
