@@ -7,10 +7,8 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="text-[#666666] mt-20">
-      {/* main footer */}
       <main className="container px-10 mx-auto">
         <div className=" flex flex-col w-full lg:flex-row justify-between lg:items-start mb-10">
-          {/* image and its content */}
           <div className="w-2/6 flex flex-col gap-12 lg:mt-6 ">
             <Image src="/Logo.webp" alt="logo" width={200} height={200} />
             <p>
@@ -37,7 +35,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* company and its content */}
           <div className="w-[20%] flex flex-col gap-3">
             <h3>Company</h3>
             <Link href={""}>About</Link>
@@ -47,7 +44,6 @@ const Footer = () => {
             <Link href={""}>Contact Us</Link>
           </div>
 
-          {/* Support and its content */}
           <div className="w-[20%] flex flex-col gap-3">
             <h3>Support</h3>
             <Link href={""}>Support Carrer</Link>
@@ -55,7 +51,6 @@ const Footer = () => {
             <Link href={""}>Quick Chat</Link>
           </div>
 
-          {/* Contact and its content */}
           <div className="w-[20%] flex flex-col gap-3">
             <h3>Contact</h3>
             <Link href={""}>Whatsapp</Link>
@@ -63,7 +58,7 @@ const Footer = () => {
           </div>
         </div>
       </main>
-      {/* copyright and its content */}
+
       <div className="border-t border-black bg-gray-200 w-full">
         <div className=" max-w-[1240px] w-full mx-auto lg:px-20 py-5 px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5">
