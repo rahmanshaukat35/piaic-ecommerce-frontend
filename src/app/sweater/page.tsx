@@ -6,19 +6,20 @@ import { SanityProducts } from "../../interface";
 import { urlForImage } from "../../../sanity/lib/image";
 
 const getAllProducts = async () => {
-  const query = `*[_type== "product"] | order(_createdAt asc){
+  const query = `*[_type== "product" && subcat == "Sweater" ] | order(_createdAt asc){
     _id,
     name,
     subcat,
     image,
     price,
-    slug
+    slug,
+    category
   }`;
   const res = await client.fetch(query);
   return res;
 };
 
-const AllProducts = async () => {
+const Sweater = async () => {
   const productsData: SanityProducts[] = await getAllProducts();
   console.log(productsData);
 
@@ -48,4 +49,4 @@ const AllProducts = async () => {
   );
 };
 
-export default AllProducts;
+export default Sweater;
