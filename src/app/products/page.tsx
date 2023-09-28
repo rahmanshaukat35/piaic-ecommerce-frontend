@@ -20,7 +20,6 @@ const getAllProducts = async () => {
 
 const AllProducts = async () => {
   const productsData: SanityProducts[] = await getAllProducts();
-  console.log(productsData);
 
   return (
     <main className="lg:px-20 px-5 max-w-[1540px] mx-auto mt-10">
@@ -30,7 +29,7 @@ const AllProducts = async () => {
             key={product._id}
             className="flex flex-col rounded-md justify-center items-center mt-3 gap-2 hover:scale-110 ease-in duration-300"
           >
-            <Link href={`/products/${product.slug.current}`}>
+            <Link href={`products/${product.slug.current}`}>
               <Image
                 src={urlForImage(product.image[0]).url()}
                 alt={product.name}

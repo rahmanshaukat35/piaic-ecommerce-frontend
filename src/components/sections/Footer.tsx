@@ -6,9 +6,9 @@ import { FaFacebook, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="text-[#666666] mt-20">
+    <footer className="text-[#666666]">
       <main className="container px-10 mx-auto">
-        <div className=" flex flex-col w-full lg:flex-row justify-between lg:items-start mb-10">
+        <div className=" flex flex-col w-full md:flex-row justify-between md:items-start mb-10">
           <div className="w-2/6 flex flex-col gap-12 lg:mt-6 ">
             <Image src="/Logo.webp" alt="logo" width={200} height={200} />
             <p>
@@ -72,11 +72,11 @@ const Footer = () => {
                 Rahman Shaukat Butt
               </Link>
             </div>
-            <div className="">
+            <div className="hidden lg:block">
               Code by:{" "}
               <Link
                 href={"https://github.com/mkdeveloper"}
-                className="font-bold text-black"
+                className="font-bold text-black "
               >
                 rahmanshaukat on Github
               </Link>

@@ -9,9 +9,10 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
+import { useAppSelector } from "@/redux/store";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const totalItems = 0;
+  const totalItems = useAppSelector((state) => state.cart.totalQuantity);
 
   const handleNav = () => setNav(!nav);
   return (
