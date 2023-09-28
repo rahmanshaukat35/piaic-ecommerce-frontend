@@ -67,16 +67,21 @@ export const cartSlice = createSlice({
     },
     removeFromCart(state: CartState, action: PayloadAction<string>) {
       const productId = action.payload;
-      const existingItem = state.items.find((item) => item._id !== productId);
+      const existingItemIndex = state.items.findIndex(
+        (item) => item._id === productId
+      );
 
-      state.totalQuantity--;
-      state.totalAmount = state.totalAmount - existingItem?.price!;
-      if (existingItem?.quantity === 1) {
-        state.items = state.items.filter((item) => item._id !== productId);
-      } else {
-        existingItem!.quantity--;
-        existingItem!.totalPrice =
-          existingItem!.totalPrice - existingItem?.price!;
+      if (existingItemIndex !== -1) {
+        const existingItem = state.items[existingItemIndex];
+        state.totalQuantity--;
+        state.totalAmount -= existingItem.price!;
+
+        if (existingItem.quantity === 1) {
+          state.items.splice(existingItemIndex, 1);
+        } else {
+          existingItem.quantity--;
+          existingItem.totalPrice -= existingItem.price!;
+        }
       }
     },
     clearCart(state) {

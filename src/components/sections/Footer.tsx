@@ -6,10 +6,10 @@ import { FaFacebook, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="text-[#666666]">
+    <footer className="text-[#666666] mt-16">
       <main className="container px-10 mx-auto">
         <div className=" flex flex-col w-full md:flex-row justify-between md:items-start mb-10">
-          <div className="w-2/6 flex flex-col gap-12 lg:mt-6 ">
+          <div className="md:w-2/6 flex flex-col gap-12 mt-6 ">
             <Image src="/Logo.webp" alt="logo" width={200} height={200} />
             <p>
               Small, artisan label that offers a thoughtfully curated collection
@@ -35,8 +35,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-[20%] flex flex-col gap-3">
-            <h3>Company</h3>
+          <div className="md:w-[20%] flex flex-col gap-3 py-4 md:py-0">
+            <h3 className="text-xl font-bold">Company</h3>
             <Link href={""}>About</Link>
             <Link href={""}>Terms of Use</Link>
             <Link href={""}>Privacy Policy</Link>
@@ -44,15 +44,15 @@ const Footer = () => {
             <Link href={""}>Contact Us</Link>
           </div>
 
-          <div className="w-[20%] flex flex-col gap-3">
-            <h3>Support</h3>
+          <div className="md:w-[20%] flex flex-col gap-3 py-4 md:py-0">
+            <h3 className="text-xl font-bold">Support</h3>
             <Link href={""}>Support Carrer</Link>
             <Link href={""}>24h Services</Link>
             <Link href={""}>Quick Chat</Link>
           </div>
 
-          <div className="w-[20%] flex flex-col gap-3">
-            <h3>Contact</h3>
+          <div className="md:w-[20%] flex flex-col gap-3 py-4 md:py-0">
+            <h3 className="text-xl font-bold">Contact</h3>
             <Link href={""}>Whatsapp</Link>
             <Link href={""}>Support 24h</Link>
           </div>

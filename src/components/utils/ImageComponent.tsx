@@ -29,7 +29,7 @@ const ImageComponent = ({ product }: ImageProps) => {
           />
         ))}
       </div>
-      <div className="w-full h-full rounded-md">
+      <div className="w-full h-full rounded-md ">
         <Image
           src={urlForImage(product.image[imageIndex]).url()}
           alt={product.name}

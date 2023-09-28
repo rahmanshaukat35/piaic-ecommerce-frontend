@@ -21,7 +21,6 @@ const getAllProducts = async () => {
 
 const Sweater = async () => {
   const productsData: SanityProducts[] = await getAllProducts();
-  console.log(productsData);
 
   return (
     <main className="lg:px-20 px-5 max-w-[1540px] mx-auto mt-10">
